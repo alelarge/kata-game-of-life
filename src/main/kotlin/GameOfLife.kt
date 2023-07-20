@@ -1,7 +1,15 @@
-class GameOfLife(private val numberOfRows: Int, private val numberOfCols:Int){
-    private val grid: Array<Array<Boolean>> = Array(numberOfRows) {Array(numberOfCols) {false}}
+enum class CellState {
+    DEAD,
+}
 
-    fun getGrid(): Array<Array<Boolean>> {
+class GameOfLife(private val rows: Int, private val cols: Int) {
+    private val grid = Array(rows) {
+        Array(cols) {
+            CellState.DEAD
+        }
+    }
+
+    fun getGrid(): Array<Array<CellState>> {
         return grid
     }
 }
