@@ -83,7 +83,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GameOfLifeTest">
+  <component name="RunManager" selected="Gradle.GameOfLifeTest.createGridInitialization">
     <configuration name="GameOfLifeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -178,8 +178,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GameOfLifeTest" />
         <item itemvalue="Gradle.GameOfLifeTest.createGridInitialization" />
+        <item itemvalue="Gradle.GameOfLifeTest" />
         <item itemvalue="Gradle.GameOfLifeTest.create the grid initialization" />
         <item itemvalue="Gradle.GameOfLifeTest.create the grid" />
       </list>
@@ -200,7 +200,7 @@
       <workItem from="1689445282959" duration="5225000" />
       <workItem from="1689579525627" duration="632000" />
       <workItem from="1689671859749" duration="1243000" />
-      <workItem from="1689861001848" duration="340000" />
+      <workItem from="1689861001848" duration="2233000" />
     </task>
     <servers />
   </component>
@@ -218,15 +218,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt</url>
-          <line>21</line>
-          <properties class="GameOfLifeTest">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
