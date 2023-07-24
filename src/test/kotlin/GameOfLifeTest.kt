@@ -1,9 +1,12 @@
+import org.assertj.core.api.Assert
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 enum class CellState {
     DEAD,
+    ALIVE
 }
 
 class GameOfLifeTest {
@@ -22,26 +25,13 @@ class GameOfLifeTest {
         assertArrayEquals(deadCellsInitialization, game.getGrid())
     }
 
-    private companion object {
-        private fun cellGridsOf(vararg liveCells: Pair<Int, Int>) = setOf(*liveCells)
-    }
-
     @Test
-    fun createCellsGrid() {
-        val cellGrids: CellGrids = cellGridsOf(0 to 0, 0 to 1, 0 to 2)
+    fun any_living_cell_with_fewer_than_two_living_neighbors_dies_subpopulation() {
+        val gameOfLife = GameOfLife(5, 5)
+        gameOfLife.setCellState(1, 1, CellState.ALIVE)
+        gameOfLife.nextGeneration()
+        assertEquals(CellState.DEAD, gameOfLife.getCellState(1, 1))
     }
-
-    @Test
-    fun `cells_with_two_adjacent_cells`(){
-        val cellGrids: CellGrids = cellGridsOf(0 to 0, 0 to 1, 0 to 2)
-        val next:CellGrids = cellGrids.step()
-        assertTrue(next.contains(0 to 1))
-    }
-
 
 }
-
- fun CellGrids.step(): CellGrids = this
-
-typealias CellGrids = Set<Pair<Int, Int>>
 
