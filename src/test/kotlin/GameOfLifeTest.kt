@@ -43,7 +43,6 @@ class GameOfLifeTest {
     }
 
     @Test
-    fun alive_cells(){
         fun setAndGetCellState_return_good_state() {
             val numberOfRows = 4
             val numberOfCols = 4
@@ -73,6 +72,5 @@ class GameOfLifeTest {
             assertEquals(CellState.ALIVE, game.getCellState(2, 1))
             assertEquals(CellState.ALIVE, game.getCellState(2, 2))
         }
-    }
 }
 
