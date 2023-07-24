@@ -31,6 +31,14 @@ class GameOfLifeTest {
         val cellGrids: CellGrids = cellGridsOf(0 to 0, 0 to 1, 0 to 2)
     }
 
+    @Test
+    fun `cells_with_two_adjacent_cells`(){
+        val cellGrids: CellGrids = cellGridsOf(0 to 0, 0 to 1, 0 to 2)
+        val next:CellGrids = cellGrids.step()
+        assertTrue(next.contains(0 to 1))
+    }
+
+
 }
 
  fun CellGrids.step(): CellGrids = this
