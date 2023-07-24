@@ -45,7 +45,8 @@ class GameOfLife(private val rows: Int, private val cols: Int) {
         return grid
     }
 
-    fun isEmptyGrid() {
+    fun isEmptyGrid(): Boolean {
+        return grid.all { row -> row.all { cell -> cell == null} }
 
     }
 }
