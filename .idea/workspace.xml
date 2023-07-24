@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="" />
+    <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +83,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GameOfLifeTest.any_living_cell_with_fewer_than_two_living_neighbors_dies_subpopulation">
+  <component name="RunManager" selected="Gradle.GameOfLifeTest.alive_cells">
     <configuration name="GameOfLifeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -94,6 +98,29 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;GameOfLifeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GameOfLifeTest.alive_cells" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;GameOfLifeTest.alive_cells&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -149,7 +176,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.cells_with_two_adjacent_cells" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GameOfLifeTest.empty_grid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -162,30 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.cells_with_two_adjacent_cells&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GameOfLifeTest.createCellsGrid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.createCellsGrid&quot;" />
+            <option value="&quot;GameOfLifeTest.empty_grid&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -197,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GameOfLifeTest.alive_cells" />
+        <item itemvalue="Gradle.GameOfLifeTest.empty_grid" />
         <item itemvalue="Gradle.GameOfLifeTest.any_living_cell_with_fewer_than_two_living_neighbors_dies_subpopulation" />
         <item itemvalue="Gradle.GameOfLifeTest.cell_with_zero_neighbors_dies" />
         <item itemvalue="Gradle.GameOfLifeTest" />
-        <item itemvalue="Gradle.GameOfLifeTest.createCellsGrid" />
-        <item itemvalue="Gradle.GameOfLifeTest.cells_with_two_adjacent_cells" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +224,7 @@
       <workItem from="1689445282959" duration="5225000" />
       <workItem from="1689579525627" duration="632000" />
       <workItem from="1689671859749" duration="1243000" />
-      <workItem from="1689861001848" duration="7244000" />
+      <workItem from="1689861001848" duration="9420000" />
     </task>
     <servers />
   </component>
