@@ -44,4 +44,8 @@ class GameOfLife(private val rows: Int, private val cols: Int) {
     fun getGrid(): Array<Array<CellState>> {
         return grid
     }
+
+    fun isEmptyGrid() {
+
+    }
 }

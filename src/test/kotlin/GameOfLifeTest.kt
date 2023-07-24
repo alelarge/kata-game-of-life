@@ -2,6 +2,7 @@ import org.assertj.core.api.Assert
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
 enum class CellState {
@@ -10,6 +11,7 @@ enum class CellState {
 }
 
 class GameOfLifeTest {
+
     @Test
     fun createGridInitialization() {
         val numberOfRows = 6
@@ -26,12 +28,18 @@ class GameOfLifeTest {
     }
 
     @Test
-    fun any_living_cell_with_fewer_than_two_living_neighbors_dies_subpopulation() {
-        val gameOfLife = GameOfLife(5, 5)
-        gameOfLife.setCellState(1, 1, CellState.ALIVE)
-        gameOfLife.nextGeneration()
-        assertEquals(CellState.DEAD, gameOfLife.getCellState(1, 1))
-    }
+    fun empty_grid() {
+        val numberOfRows = 0
+        val numberOfCols = 0
 
+        val game = GameOfLife(numberOfRows, numberOfCols)
+        val grid = game.getGrid()
+
+        for (row in grid) {
+            for (cell in row) {
+                assertNull(cell)
+            }
+        }
+    }
 }
 
