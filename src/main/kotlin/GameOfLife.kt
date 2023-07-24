@@ -37,9 +37,10 @@ class GameOfLife(private val rows: Int, private val cols: Int) {
                 }
             }
         }
-
         grid = newGrid
     }
+
+
 
     private fun countAliveNeighbors(row: Int, column: Int): Int {
         var aliveCount = 0
