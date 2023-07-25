@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" afterDir="false" />
     </list>
-    <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="" />
+    <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +53,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
+        <range start1="7" end1="8" start2="8" end2="18" changelist="0c7217ac-2641-4d16-9508-0a9e19e0f54d" />
+        <range start1="11" end1="11" start2="21" end2="22" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
+        <range start1="16" end1="16" start2="27" end2="28" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
+        <range start1="20" end1="20" start2="32" end2="33" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
+        <range start1="23" end1="28" start2="36" end2="36" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
+        <range start1="29" end1="29" start2="37" end2="42" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -85,7 +100,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestAcceptanceTest.any_living_cell_with_two_or_three_living_neighbors_survives">
+  <component name="RunManager" selected="Gradle.GameOfLifeTest.when i have a board 5-5, alive cells 2-2 return game over">
     <configuration name="GameOfLifeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -109,7 +124,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.empty_grid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GameOfLifeTest.when i have a board 5-5, alive celle 2-2 return game over" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -122,7 +137,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.empty_grid&quot;" />
+            <option value="&quot;GameOfLifeTest.when i have a board 5-5, alive celle 2-2 return game over&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GameOfLifeTest.when i have a board 5-5, alive cells 2-2 return game over" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;GameOfLifeTest.when i have a board 5-5, alive cells 2-2 return game over&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GameOfLifeTest.when i have no alive and dead cells, return game over" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;GameOfLifeTest.when i have no alive and dead cells, return game over&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -155,57 +216,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestAcceptanceTest.any_living_cell_with_two_or_three_living_neighbors_survives" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestAcceptanceTest.any_living_cell_with_two_or_three_living_neighbors_survives&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in 'kata-game-of-life'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'kata-game-of-life'" />
+        <item itemvalue="Gradle.GameOfLifeTest.when i have a board 5-5, alive cells 2-2 return game over" />
+        <item itemvalue="Gradle.GameOfLifeTest.when i have no alive and dead cells, return game over" />
+        <item itemvalue="Gradle.GameOfLifeTest.when i have a board 5-5, alive celle 2-2 return game over" />
         <item itemvalue="Gradle.GameOfLifeTest" />
-        <item itemvalue="Gradle.TestAcceptanceTest.any_living_cell_with_two_or_three_living_neighbors_survives" />
         <item itemvalue="Gradle.TestAcceptanceTest" />
-        <item itemvalue="Gradle.GameOfLifeTest.empty_grid" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +241,7 @@
       <workItem from="1689445282959" duration="5225000" />
       <workItem from="1689579525627" duration="632000" />
       <workItem from="1689671859749" duration="1243000" />
-      <workItem from="1689861001848" duration="23224000" />
+      <workItem from="1689861001848" duration="28175000" />
     </task>
     <servers />
   </component>
