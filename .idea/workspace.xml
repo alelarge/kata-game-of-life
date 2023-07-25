@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" afterDir="false" />
     </list>
+    <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +85,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GameOfLifeTest.setAndGetCellState_return_good_state_game2">
+  <component name="RunManager" selected="Gradle.TestAcceptanceTest.any_living_cell_with_two_or_three_living_neighbors_survives">
     <configuration name="GameOfLifeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -109,7 +109,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.invalid_grid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GameOfLifeTest.empty_grid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -122,7 +122,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.invalid_grid&quot;" />
+            <option value="&quot;GameOfLifeTest.empty_grid&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -132,7 +132,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.setAndGetCellState_return_good_state" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestAcceptanceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -145,7 +145,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.setAndGetCellState_return_good_state&quot;" />
+            <option value="&quot;TestAcceptanceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -155,7 +155,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.setAndGetCellState_return_good_state_game2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestAcceptanceTest.any_living_cell_with_two_or_three_living_neighbors_survives" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -168,7 +168,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.setAndGetCellState_return_good_state_game2&quot;" />
+            <option value="&quot;TestAcceptanceTest.any_living_cell_with_two_or_three_living_neighbors_survives&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -178,7 +178,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestAcceptanceTest.any_living_cell_with_fewer_than_two_living_neighbors_dies_subpopulation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'kata-game-of-life'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -190,8 +190,6 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestAcceptanceTest.any_living_cell_with_fewer_than_two_living_neighbors_dies_subpopulation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GameOfLifeTest.setAndGetCellState_return_good_state_game2" />
+        <item itemvalue="Gradle.Tests in 'kata-game-of-life'" />
         <item itemvalue="Gradle.GameOfLifeTest" />
-        <item itemvalue="Gradle.GameOfLifeTest.setAndGetCellState_return_good_state" />
-        <item itemvalue="Gradle.TestAcceptanceTest.any_living_cell_with_fewer_than_two_living_neighbors_dies_subpopulation" />
-        <item itemvalue="Gradle.GameOfLifeTest.invalid_grid" />
+        <item itemvalue="Gradle.TestAcceptanceTest.any_living_cell_with_two_or_three_living_neighbors_survives" />
+        <item itemvalue="Gradle.TestAcceptanceTest" />
+        <item itemvalue="Gradle.GameOfLifeTest.empty_grid" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +224,7 @@
       <workItem from="1689445282959" duration="5225000" />
       <workItem from="1689579525627" duration="632000" />
       <workItem from="1689671859749" duration="1243000" />
-      <workItem from="1689861001848" duration="16803000" />
+      <workItem from="1689861001848" duration="23224000" />
     </task>
     <servers />
   </component>
