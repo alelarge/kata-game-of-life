@@ -2,7 +2,7 @@ class GameOfLife(private val rows: Int, private val cols: Int) {
     private val board = List(rows) { List(cols) { false } }
 
     fun isOver(): Boolean{
-        return true
+        return rows == 0 && cols == 0
     }
 
     fun isCellAlive(row: Int, col: Int, b: Boolean): Boolean {
