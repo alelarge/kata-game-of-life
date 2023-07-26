@@ -5,9 +5,9 @@ class GameOfLife(private val rows: Int, private val cols: Int) {
         return true
     }
 
-    fun isCellAlive(row:Int, col: Int): Boolean {
+    fun isCellAlive(row: Int, col: Int, b: Boolean): Boolean {
         if (row <2){
-            return true
+            return false
         }
         return board[row][col]
     }

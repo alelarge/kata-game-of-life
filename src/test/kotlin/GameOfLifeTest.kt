@@ -17,17 +17,19 @@ class GameOfLifeTest {
     }
 
     @Test
-    fun `when i have a board 5-5, alive cells 2-2 return game over`(){
+    fun `given a 5 by 5 game and cell 2,2 is alive, then the game is not over`(){
         //given
-      val game = GameOfLife(5,5)
-
-        //when
+        val game = GameOfLife(5,5)
         val aliveCellRow = 2
         val aliveCellCol = 2
 
-        //then
-        val isGameOver = !game.isCellAlive(aliveCellRow, aliveCellCol)
+        //when
 
-        assertThat(true).isEqualTo(isGameOver)
+        game.isCellAlive(aliveCellRow, aliveCellCol, true)
+
+        //then
+        val gameOver = game.isOver()
+
+        assertThat(false).isEqualTo(gameOver)
     }
 }
