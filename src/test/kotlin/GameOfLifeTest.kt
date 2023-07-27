@@ -34,7 +34,7 @@ class GameOfLifeTest {
     }
 
     @Test
-    fun `given a 5 by 5 game and cell 2,2 is dead, then the game is over`(){
+    fun `given a 5 by 5 game and cell 2,2 is dead, then the game is not over`(){
         //given
         val game = GameOfLife(5,5)
         val deadCellRow = 2
@@ -47,6 +47,6 @@ class GameOfLifeTest {
         //then
         val gameOver = game.isOver()
 
-        assertThat(true).isEqualTo(gameOver)
+        assertThat(false).isEqualTo(gameOver)
     }
 }

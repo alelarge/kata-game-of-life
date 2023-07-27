@@ -13,8 +13,8 @@ class GameOfLife(private val rows: Int, private val cols: Int) {
     }
 
 
-    fun isCellDead(deadCellRow: Int, deadCellCol: Int, b: Boolean) {
-
+    fun isCellDead(deadCellRow: Int, deadCellCol: Int, b: Boolean): Boolean {
+        return false
     }
 
 }
