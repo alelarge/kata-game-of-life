@@ -11,4 +11,10 @@ class GameOfLife(private val rows: Int, private val cols: Int) {
         }
         return board[row][col]
     }
+
+
+    fun isCellDead(deadCellRow: Int, deadCellCol: Int, b: Boolean) {
+
+    }
+
 }
