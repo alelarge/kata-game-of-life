@@ -25,7 +25,7 @@ class GameOfLifeTest {
 
         //when
 
-        game.isCellAlive(aliveCellRow, aliveCellCol, true)
+        game.isCellAlive(aliveCellRow, aliveCellCol)
 
         //then
         val gameOver = game.isOver()
@@ -42,11 +42,13 @@ class GameOfLifeTest {
 
         //when
 
-        game.isCellDead(deadCellRow, deadCellCol, true)
+        val isDead = game.isCellDead(deadCellRow, deadCellCol)
 
         //then
-        val gameOver = game.isOver()
 
-        assertThat(false).isEqualTo(gameOver)
+        assertThat(game.isCellDead(2, 2)).isEqualTo(true)
+
+
+        assertThat(true).isEqualTo(isDead)
     }
 }
