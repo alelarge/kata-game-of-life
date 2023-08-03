@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
     </list>
-    <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt" afterDir="false" />
-    </list>
+    <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,19 +49,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/test/kotlin/TestAcceptanceTest.kt">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
-        <range start1="7" end1="8" start2="8" end2="18" changelist="0c7217ac-2641-4d16-9508-0a9e19e0f54d" />
-        <range start1="11" end1="11" start2="21" end2="22" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
-        <range start1="16" end1="16" start2="27" end2="28" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
-        <range start1="20" end1="20" start2="32" end2="33" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
-        <range start1="23" end1="28" start2="36" end2="36" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
-        <range start1="29" end1="29" start2="37" end2="42" changelist="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -242,6 +226,9 @@
       <workItem from="1689579525627" duration="632000" />
       <workItem from="1689671859749" duration="1243000" />
       <workItem from="1689861001848" duration="28175000" />
+      <workItem from="1690811994521" duration="19000" />
+      <workItem from="1690814382384" duration="588000" />
+      <workItem from="1690981438354" duration="9000" />
     </task>
     <servers />
   </component>
