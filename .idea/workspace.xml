@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
-    </list>
+    <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="" />
     <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GameOfLifeTest.when i have a board 5-5, alive cells 2-2 return game over">
+  <component name="RunManager" selected="Gradle.GameOfLifeTest.dead cell">
     <configuration name="GameOfLifeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -108,7 +104,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.when i have a board 5-5, alive celle 2-2 return game over" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GameOfLifeTest.cell" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -121,7 +117,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.when i have a board 5-5, alive celle 2-2 return game over&quot;" />
+            <option value="&quot;GameOfLifeTest.cell&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -131,7 +127,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.when i have a board 5-5, alive cells 2-2 return game over" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GameOfLifeTest.dead cell" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -144,7 +140,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.when i have a board 5-5, alive cells 2-2 return game over&quot;" />
+            <option value="&quot;GameOfLifeTest.dead cell&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -177,36 +173,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestAcceptanceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;TestAcceptanceTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="FizzBuzzKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FizzBuzzKt" />
+      <module name="kata-game-of-life.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GameOfLifeTest.when i have a board 5-5, alive cells 2-2 return game over" />
-        <item itemvalue="Gradle.GameOfLifeTest.when i have no alive and dead cells, return game over" />
-        <item itemvalue="Gradle.GameOfLifeTest.when i have a board 5-5, alive celle 2-2 return game over" />
+        <item itemvalue="Gradle.GameOfLifeTest.dead cell" />
         <item itemvalue="Gradle.GameOfLifeTest" />
-        <item itemvalue="Gradle.TestAcceptanceTest" />
+        <item itemvalue="Kotlin.FizzBuzzKt" />
+        <item itemvalue="Gradle.GameOfLifeTest.cell" />
+        <item itemvalue="Gradle.GameOfLifeTest.when i have no alive and dead cells, return game over" />
       </list>
     </recent_temporary>
   </component>
@@ -229,6 +209,7 @@
       <workItem from="1690811994521" duration="19000" />
       <workItem from="1690814382384" duration="588000" />
       <workItem from="1690981438354" duration="9000" />
+      <workItem from="1691047498504" duration="9967000" />
     </task>
     <servers />
   </component>
