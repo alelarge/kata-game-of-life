@@ -61,4 +61,23 @@ class CellTest {
         deadCell.evolve(neighbours)
         assertThat(deadCell.isAlive()).isTrue
     }
+
+
+
+    @Test
+    fun `given a 5 by 5 game and cell 2,2 is dead, then the game is over`(){
+        //given
+        val game = GameOfLife(5,5)
+        val deadCellRow = 2
+        val deadCellCol = 2
+
+        //when
+        game.isCellDead(deadCellRow, deadCellCol, true)
+
+        //then
+        val isGameOver = game.isOver()
+
+        assertThat(true).isEqualTo(isGameOver)
+    }
 }
+
