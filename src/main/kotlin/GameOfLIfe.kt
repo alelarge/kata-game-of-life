@@ -1,30 +1,36 @@
+interface CellState {
+    fun isAlive(): Boolean
+}
 
-class Cell {
-    //attribut stocke information objets
-    var state: Boolean
+class AliveState : CellState {
+    override fun isAlive() = true
+}
 
-    //parametre state ligne en dessous
-    constructor(state: Boolean) {
-        this.state = state
-        // attribut this.state
-        // attribut rajouter this
-    }
+class DeadState : CellState {
+    override fun isAlive() = false
+}
 
+class Cell(private var state: CellState) {
     fun isAlive(): Boolean {
-        if (state == false) {
-            return false
-        } else {
-            return true
-        }
+        return state.isAlive()
     }
-    fun Evolue(neighbour: List<Cell>){
-        val numberNeighbour= neighbour.count {
-            it.isAlive()
-        }
-        if(numberNeighbour<2 || numberNeighbour>3){
-            state = false
+
+    fun evolve(neighbours: List<Cell>) {
+        val numNeighboursAlive = neighbours.count { it.isAlive() }
+
+        state = if (state.isAlive()) {
+            if (numNeighboursAlive < 2 || numNeighboursAlive > 3) {
+                DeadState()
+            } else {
+                AliveState()
+            }
         } else {
-            state = true
+            if (numNeighboursAlive == 3) {
+                AliveState()
+            } else {
+                DeadState()
+            }
         }
     }
 }
+

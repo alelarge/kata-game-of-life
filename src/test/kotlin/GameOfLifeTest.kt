@@ -1,56 +1,64 @@
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-class GameOfLifeTest {
+class CellTest {
     @Test
-    fun `alive cell`() {
-        val aliveCell = Cell(state = true)
+    fun `cell should be alive when initialized as alive`() {
+        val aliveCell = Cell(AliveState())
         assertThat(aliveCell.isAlive()).isTrue
     }
 
     @Test
-    fun `dead cell`() {
-        val deadCell = Cell(state = false)
+    fun `cell should be dead when initialized as dead`() {
+        val deadCell = Cell(DeadState())
         assertThat(deadCell.isAlive()).isFalse
     }
 
     @Test
-    fun `when i have alive cell less than 2 neighbors they die`() {
-        val aliveCell = Cell(state = true)
-        val neighbour = listOf(Cell(state = true), Cell(state = false), Cell(state = false))
-        aliveCell.Evolue(neighbour)
+    fun `cell dies when it has less than 2 live neighbors`() {
+        val aliveCell = Cell(AliveState())
+        val neighbours = listOf(Cell(AliveState()), Cell(DeadState()), Cell(DeadState()))
+        aliveCell.evolve(neighbours)
         assertThat(aliveCell.isAlive()).isFalse
     }
 
     @Test
-    fun `if more than 3 neighbors, the cell dies`(){
-        val aliveCell = Cell(state = true)
-        val neighbour = listOf(Cell(state = true), Cell(state = false), Cell(state = false), Cell(state = false))
-        aliveCell.Evolue(neighbour)
+    fun `cell dies when it has more than 3 live neighbors`() {
+        val aliveCell = Cell(AliveState())
+        val neighbours = listOf(Cell(AliveState()), Cell(DeadState()), Cell(DeadState()), Cell(DeadState()))
+        aliveCell.evolve(neighbours)
         assertThat(aliveCell.isAlive()).isFalse
     }
 
     @Test
-    fun `if 2 I stay alive`() {
-        val aliveCell = Cell(state = true)
-        val neighbour = listOf(Cell(state = true), Cell(state = true))
-        aliveCell.Evolue(neighbour)
+    fun `cell stays alive when it has 2 live neighbors`() {
+        val aliveCell = Cell(AliveState())
+        val neighbours = listOf(Cell(AliveState()), Cell(AliveState()))
+        aliveCell.evolve(neighbours)
         assertThat(aliveCell.isAlive()).isTrue
     }
 
     @Test
-    fun `if 3 I stay alive`() {
-        val aliveCell = Cell(state = true)
-        val neighbour = listOf(Cell(state = true), Cell(state = true), Cell(state = true))
-        aliveCell.Evolue(neighbour)
+    fun `cell stays alive when it has 3 live neighbors`() {
+        val aliveCell = Cell(AliveState())
+        val neighbours = listOf(Cell(AliveState()), Cell(AliveState()), Cell(AliveState()))
+        aliveCell.evolve(neighbours)
         assertThat(aliveCell.isAlive()).isTrue
     }
 
     @Test
-        fun `if a dead cell has exactly three neighbors, it must live`() {
-          val aliveCell = Cell(state=false)
-          val neighbour = listOf(Cell(state=true), Cell(state=true), Cell(state=true))
-          aliveCell.Evolue(neighbour)
-          assertThat(aliveCell.isAlive()).isTrue
-        }
+    fun `dead cell becomes alive when it has exactly three live neighbors`() {
+        val deadCell = Cell(DeadState())
+        val neighbours = listOf(Cell(AliveState()), Cell(AliveState()), Cell(AliveState()))
+        deadCell.evolve(neighbours)
+        assertThat(deadCell.isAlive()).isTrue
+    }
+
+    @Test
+    fun `dead cell with three live neighbors becomes alive by reproduction`(){
+        val deadCell = Cell(DeadState())
+        val neighbours = listOf(Cell(AliveState()), Cell(AliveState()), Cell(AliveState()))
+        deadCell.evolve(neighbours)
+        assertThat(deadCell.isAlive()).isTrue
+    }
 }
