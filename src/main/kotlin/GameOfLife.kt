@@ -2,12 +2,13 @@ enum class CellState {
     ALIVE, DEAD
 }
 class GameOfLife(private val rows: Int, private val cols: Int) {
-    fun isCellDead(row: Int, col: Int, b: Boolean) {
 
+    fun isCellDead(row: Int, col: Int, b: Boolean): Boolean {
+        return true
     }
 
     fun isOver(): Boolean {
-        TODO("Not yet implemented")
+        return true
     }
 
 }
