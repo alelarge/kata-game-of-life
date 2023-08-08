@@ -79,5 +79,27 @@ class CellTest {
 
         assertThat(true).isEqualTo(isGameOver)
     }
+        @Test
+        fun `should return all positions in 3-3 grid`() {
+            // Given
+            val rows = 3
+            val cols = 3
+            val expectedPositions = listOf(
+                Pair(0, 0), Pair(0, 1), Pair(0, 2),
+                Pair(1, 0), Pair(1, 1), Pair(1, 2),
+                Pair(2, 0), Pair(2, 1), Pair(2, 2)
+            )
+
+            // When
+            val grid = Grid(rows, cols)
+            val generatedPositions = mutableListOf<Pair<Int, Int>>()
+            while (grid.hasNext()) {
+                val position = grid.next()
+                generatedPositions.add(position)
+            }
+
+            // Then
+            assertThat(generatedPositions).containsExactlyElementsOf(expectedPositions)
+        }
 }
 
