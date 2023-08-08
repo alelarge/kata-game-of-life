@@ -1,17 +1,35 @@
-enum class CellState {
-    ALIVE, DEAD
-}
-class GameOfLife(private val rows: Int, private val cols: Int) {
-
-    fun isCellDead(row: Int, col: Int, b: Boolean): Boolean {
+class GameOfLife {
+    fun isCellDead(): Boolean {
         return true
     }
-
     fun isOver(): Boolean {
         return true
     }
-
 }
+class Grid(private val rows: Int, private val cols: Int) {
+    private var currentRow = 0
+    private var currentCol = 0
+
+    fun hasNext(): Boolean {
+        return currentRow < rows && currentCol < cols
+    }
+
+    fun next(): Pair<Int, Int> {
+        val position = Pair(currentRow, currentCol)
+
+        currentCol++
+        if (currentCol == cols) {
+            currentCol = 0
+            currentRow++
+        }
+
+        return position
+    }
+}
+enum class CellState {
+    ALIVE, DEAD
+}
+
 class Cell(private var state: CellState) {
     fun isAlive(): Boolean {
         return state == CellState.ALIVE

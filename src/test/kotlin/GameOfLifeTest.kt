@@ -55,7 +55,7 @@ class CellTest {
     }
 
     @Test
-    fun `dead cell with three live neighbors becomes alive by reproduction`(){
+    fun `dead cell with three live neighbors becomes alive by reproduction`() {
         val deadCell = Cell(CellState.DEAD)
         val neighbours = listOf(Cell(CellState.ALIVE), Cell(CellState.ALIVE), Cell(CellState.ALIVE))
         deadCell.evolve(neighbours)
@@ -63,43 +63,47 @@ class CellTest {
     }
 
 
-
     @Test
-    fun `given a 5 by 5 game and cell 2,2 is dead, then the game is over`(){
+    fun `given a 5 by 5 game and cell 2,2 is dead, then the game is over`() {
         //given
-        val game = GameOfLife(5,5)
+        val game = GameOfLife()
         val deadCellRow = 2
         val deadCellCol = 2
 
         //when
-        game.isCellDead(deadCellRow, deadCellCol, true)
+        game.isCellDead()
 
         //then
         val isGameOver = game.isOver()
 
         assertThat(true).isEqualTo(isGameOver)
     }
-        @Test
-        fun `should return all positions in 3-3 grid`() {
-            // Given
-            val rows = 3
-            val cols = 3
-            val expectedPositions = listOf(
-                Pair(0, 0), Pair(0, 1), Pair(0, 2),
-                Pair(1, 0), Pair(1, 1), Pair(1, 2),
-                Pair(2, 0), Pair(2, 1), Pair(2, 2)
-            )
 
-            // When
-            val grid = Grid(rows, cols)
-            val generatedPositions = mutableListOf<Pair<Int, Int>>()
-            while (grid.hasNext()) {
-                val position = grid.next()
-                generatedPositions.add(position)
-            }
+    @Test
+    fun `should generate all positions in a 3 by 3 grid`() {
+        // Given
+        val rows = 3
+        val cols = 3
+        val expectedPositions = listOf(
+            Pair(0, 0), Pair(0, 1), Pair(0, 2),
+            Pair(1, 0), Pair(1, 1), Pair(1, 2),
+            Pair(2, 0), Pair(2, 1), Pair(2, 2)
+        )
 
-            // Then
-            assertThat(generatedPositions).containsExactlyElementsOf(expectedPositions)
+        // When
+        val grid = Grid(rows, cols)
+        val generatedPositions = mutableListOf<Pair<Int, Int>>()
+        while (grid.hasNext()) {
+            val position = grid.next()
+            generatedPositions.add(position)
         }
+
+        // Then
+        assertThat(generatedPositions).containsExactlyElementsOf(expectedPositions)
+    }
 }
+
+
+
+
 
