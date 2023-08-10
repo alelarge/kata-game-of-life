@@ -1,4 +1,4 @@
-class GameOfLife {
+class GameOfLife  {
     fun isCellDead(): Boolean {
         return true
     }

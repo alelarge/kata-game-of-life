@@ -101,7 +101,27 @@ class CellTest {
         // Then
         assertThat(generatedPositions).containsExactlyElementsOf(expectedPositions)
     }
-}
+
+
+        @Test
+        fun `update cell states correctly according to the initial positions of living cells`() {
+            // Given
+            val rows = 3
+            val cols = 3
+            val initialLivingCellPositions = listOf(Pair(0, 0), Pair(1, 1))
+            val grid = Grid(rows, cols)
+            val game = GameOfLife(grid, initialLivingCellPositions)
+
+            // When
+            game.nextTurn()
+
+            //Then
+            assertThat(grid.getCell(0, 0).isAlive()).isTrue
+            assertThat(grid.getCell(1, 1).isAlive()).isTrue
+            assertThat(grid.getCell(0, 1).isAlive()).isFalse
+        }
+    }
+
 
 
 
