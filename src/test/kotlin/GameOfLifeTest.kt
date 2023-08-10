@@ -71,13 +71,14 @@ class CellTest {
         val deadCellCol = 2
 
         //when
-        game.isCellDead()
+        game.isCellDead(0, 0)
 
         //then
         val isGameOver = game.isOver()
 
         assertThat(true).isEqualTo(isGameOver)
     }
+
 
     @Test
     fun `should generate all positions in a 3 by 3 grid`() {
@@ -102,7 +103,6 @@ class CellTest {
         assertThat(generatedPositions).containsExactlyElementsOf(expectedPositions)
     }
 
-
         @Test
         fun `update cell states correctly according to the initial positions of living cells`() {
             // Given
@@ -115,12 +115,14 @@ class CellTest {
             // When
             game.nextTurn()
 
-            //Then
-            assertThat(grid.getCell(0, 0).isAlive()).isTrue
-            assertThat(grid.getCell(1, 1).isAlive()).isTrue
-            assertThat(grid.getCell(0, 1).isAlive()).isFalse
+            // Then
+            assertThat(game.isCellDead(0, 0)).isFalse
+            assertThat(game.isCellDead(1, 1)).isFalse
+            assertThat(game.isCellDead(0, 1)).isTrue
+            assertThat(game.isCellDead(1, 0)).isTrue
         }
-    }
+}
+
 
 
 

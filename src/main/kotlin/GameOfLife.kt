@@ -1,9 +1,14 @@
-class GameOfLife  {
-    fun isCellDead(): Boolean {
+class GameOfLife(private val grid: Grid, private val initialLivingCellPositions: List<Pair<Int, Int>>)  {
+
+    fun isCellDead(i: Int, i1: Int): Boolean {
         return true
     }
     fun isOver(): Boolean {
         return true
+    }
+
+    fun nextTurn() {
+        TODO("Not yet implemented")
     }
 }
 class Grid(private val rows: Int, private val cols: Int) {
@@ -24,6 +29,10 @@ class Grid(private val rows: Int, private val cols: Int) {
         }
 
         return position
+    }
+
+    fun getCell(i: Int, i1: Int): Any {
+        TODO("Not yet implemented")
     }
 }
 enum class CellState {
