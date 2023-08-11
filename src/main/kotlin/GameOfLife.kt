@@ -1,16 +1,17 @@
-class GameOfLife(grid1: Grid, private val grid: List<Pair<Int, Int>>, private val initialLivingCellPositions: Any) {
+class GameOfLife(private val grid: Grid, private val initialLivingCellPositions: List<Pair<Int, Int>>){
 
-    fun nextTurn() {
-        TODO("Not yet implemented")
+
+    fun next() {
     }
 
-     fun isCellDead(i: Int, i1: Int): Boolean {
-         return true
-     }
-     fun isOver(): Boolean {
-         return true
-     }
 
+    fun isCellDead(row: Int, col: Int): Boolean {
+        return true
+    }
+
+    fun isOver(): Boolean {
+        return true
+    }
 }
 
 class Grid(private val rows: Int, private val cols: Int) {
@@ -32,9 +33,11 @@ class Grid(private val rows: Int, private val cols: Int) {
 
         return position
     }
+
+    fun getNeighbourPositions(row: Int, col: Int) {
+    }
+
 }
-
-
 
 enum class CellState {
     ALIVE, DEAD
