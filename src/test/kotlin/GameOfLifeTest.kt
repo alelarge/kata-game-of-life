@@ -92,7 +92,10 @@ class CellTest {
             val cols = 3
             val initialLivingCellPositions = listOf(Pair(0, 0), Pair(1, 1))
             val grid = Grid(rows, cols)
-            val game = GameOfLife(grid, initialLivingCellPositions)
+
+            val neighbourPositions = foundNeighbourPositions(initialLivingCellPositions)
+
+            val game = GameOfLife(grid, initialLivingCellPositions, neighbourPositions)
 
             // When
             game.nextTurn()
@@ -103,6 +106,7 @@ class CellTest {
             assertThat(game.isCellDead(0, 1)).isTrue
         }
 }
+
 
 
 
