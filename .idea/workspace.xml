@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="" />
+    <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
+    </list>
     <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +84,8 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GameOfLifeTest.dead cell">
-    <configuration name="GameOfLifeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CellTest">
+    <configuration name="CellTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -94,7 +98,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest&quot;" />
+            <option value="&quot;CellTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -104,7 +108,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.cell" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CellTest.cell should be alive when initialized as alive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -117,7 +121,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.cell&quot;" />
+            <option value="&quot;CellTest.cell should be alive when initialized as alive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -127,7 +131,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.dead cell" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CellTest.cell should be dead when initialized as dead" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -140,7 +144,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.dead cell&quot;" />
+            <option value="&quot;CellTest.cell should be dead when initialized as dead&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -150,7 +154,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GameOfLifeTest.when i have no alive and dead cells, return game over" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CellTest.should generate all positions in a 3 by 3 grid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -163,7 +167,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;GameOfLifeTest.when i have no alive and dead cells, return game over&quot;" />
+            <option value="&quot;CellTest.should generate all positions in a 3 by 3 grid&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -173,20 +177,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FizzBuzzKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FizzBuzzKt" />
-      <module name="kata-game-of-life.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="CellTest.update cell states correctly according to the initial positions of living cells" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CellTest.update cell states correctly according to the initial positions of living cells&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GameOfLifeTest.dead cell" />
-        <item itemvalue="Gradle.GameOfLifeTest" />
-        <item itemvalue="Kotlin.FizzBuzzKt" />
-        <item itemvalue="Gradle.GameOfLifeTest.cell" />
-        <item itemvalue="Gradle.GameOfLifeTest.when i have no alive and dead cells, return game over" />
+        <item itemvalue="Gradle.CellTest" />
+        <item itemvalue="Gradle.CellTest.update cell states correctly according to the initial positions of living cells" />
+        <item itemvalue="Gradle.CellTest.cell should be dead when initialized as dead" />
+        <item itemvalue="Gradle.CellTest.cell should be alive when initialized as alive" />
+        <item itemvalue="Gradle.CellTest.should generate all positions in a 3 by 3 grid" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +230,7 @@
       <workItem from="1690814382384" duration="588000" />
       <workItem from="1690981438354" duration="9000" />
       <workItem from="1691047498504" duration="9967000" />
+      <workItem from="1691063906981" duration="17427000" />
     </task>
     <servers />
   </component>

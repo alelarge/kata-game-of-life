@@ -85,26 +85,29 @@ class CellTest {
         assertThat(generatedPositions).containsExactlyElementsOf(expectedPositions)
     }
 
-        @Test
-        fun `update cell states correctly according to the initial positions of living cells`() {
-            // Given
-            val rows = 3
-            val cols = 3
-            val initialLivingCellPositions = listOf(Pair(0, 0), Pair(1, 1))
-            val grid = Grid(rows, cols)
+    @Test
+    fun `update cell states correctly according to the initial positions of living cells`() {
+        // Given
+        val rows = 3
+        val cols = 3
+        val initialLivingCellPositions = listOf(Pair(0, 0), Pair(1, 1))
+        val grid = Grid(rows, cols)
+        val neighbourPositions = calculateNeighbourPositions(initialLivingCellPositions)
 
-            val neighbourPositions = foundNeighbourPositions(initialLivingCellPositions)
+        val game = GameOfLife(grid, initialLivingCellPositions, neighbourPositions)
 
-            val game = GameOfLife(grid, initialLivingCellPositions, neighbourPositions)
+        // When
+        game.nextTurn()
 
-            // When
-            game.nextTurn()
+        // Then
+        assertThat(game.isCellDead(0, 0)).isFalse
+        assertThat(game.isCellDead(1, 1)).isFalse
+        assertThat(game.isCellDead(0, 1)).isTrue
+    }
 
-            // Then
-            assertThat(game.isCellDead(0, 0)).isFalse
-            assertThat(game.isCellDead(1, 1)).isFalse
-            assertThat(game.isCellDead(0, 1)).isTrue
-        }
+    private fun calculateNeighbourPositions(initialLivingCellPositions: List<Pair<Int, Int>>) {
+    }
+
 }
 
 
