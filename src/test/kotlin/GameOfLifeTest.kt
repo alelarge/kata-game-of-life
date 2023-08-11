@@ -98,52 +98,6 @@ class CellTest {
     }
 }
 
-private fun Unit.toSet() {
-
-}
-
-/*    @Test
-    fun `update cell states correctly according to the initial positions of living cells`() {
-        // Given
-        val rows = 3
-        val cols = 3
-        val initialLivingCellPositions = listOf(Pair(0, 0), Pair(1, 1))
-        val grid = Grid(rows, cols)
-        val game = GameOfLife(grid, initialLivingCellPositions)
-
-        // When
-        game.nextTurn()
-
-        //Then
-        assertThat(grid.getCell(0, 0).isAlive()).isTrue
-        assertThat(grid.getCell(1, 1).isAlive()).isTrue
-        assertThat(grid.getCell(0, 1).isAlive()).isFalse
-    }
-
-
-}*/
-
-/* @Test
- fun `update cell states correctly according to the initial positions of living cells`() {
-     // Given
-     val rows = 3
-     val cols = 3
-     val initialLivingCellPositions = listOf(Pair(0, 0), Pair(1, 1))
-     val grid = Grid(rows, cols)
-     val neighbourPositions = calculateNeighbourPositions(initialLivingCellPositions)
-
-     val game = GameOfLife(grid, initialLivingCellPositions, neighbourPositions)
-
-     // When
-     game.nextTurn()
-
-     // Then
-     assertThat(game.isCellDead(0, 0)).isFalse
-     assertThat(game.isCellDead(1, 1)).isFalse
-     assertThat(game.isCellDead(0, 1)).isTrue
- }*/
-
-
 
 
 

@@ -1,9 +1,4 @@
-class GameOfLife(private val grid: Grid, private val initialLivingCellPositions: List<Pair<Int, Int>>){
-
-
-    fun next() {
-    }
-
+/*class GameOfLife(private val grid: Grid, private val initialLivingCellPositions: List<Pair<Int, Int>>){
 
     fun isCellDead(row: Int, col: Int): Boolean {
         return true
@@ -12,7 +7,7 @@ class GameOfLife(private val grid: Grid, private val initialLivingCellPositions:
     fun isOver(): Boolean {
         return true
     }
-}
+}*/
 
 class Grid(private val rows: Int, private val cols: Int) {
     private var currentRow = 0
@@ -34,9 +29,21 @@ class Grid(private val rows: Int, private val cols: Int) {
         return position
     }
 
-    fun getNeighbourPositions(row: Int, col: Int) {
-    }
+    fun getNeighbourPositions(row: Int, col: Int): Set<Pair<Int, Int>> {
+        val neighbourPositions = mutableSetOf<Pair<Int, Int>>()
 
+        val rowOffsets = (row - 1..row + 1).filter { it in 0 until rows }
+        val colOffsets = (col - 1..col + 1).filter { it in 0 until cols }
+
+        for (i in rowOffsets) {
+            for (j in colOffsets) {
+                if (i == row && j == col) continue
+                neighbourPositions.add(Pair(i, j))
+            }
+        }
+
+        return neighbourPositions
+    }
 }
 
 enum class CellState {
