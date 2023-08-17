@@ -1,5 +1,7 @@
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import javax.swing.text.Position
+import kotlin.test.assertEquals
 
 class CellTest {
     @Test
@@ -117,11 +119,8 @@ class CellTest {
         }
 
         // Then
-        assertThat(generatedPositions).containsExactlyInAnyOrderElementsOf(expectedPositions)
+        assertEquals(expectedPositions, generatedPositions)
     }
-
-
-
 }
 
 
