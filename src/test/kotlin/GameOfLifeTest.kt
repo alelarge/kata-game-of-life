@@ -96,6 +96,32 @@ class CellTest {
         )
         assertThat(neighbours.toSet()).isEqualTo(expectedNeighbours)
     }
+
+    @Test
+    fun `must return all positions in a 3 by 3 grid, taking into account corners and edges`() {
+        // Given
+        val rows = 3
+        val cols = 3
+        val expectedPositions = listOf(
+            Position(0, 0), Position(0, 1), Position(0, 2),
+            Position(1, 0), Position(1, 1), Position(1, 2),
+            Position(2, 0), Position(2, 1), Position(2, 2)
+        )
+
+        // When
+        val grid = Grid(rows, cols)
+        val generatedPositions = mutableListOf<Position>()
+        while (grid.hasNext()) {
+            val position = grid.next()
+            generatedPositions.add(position)
+        }
+
+        // Then
+        assertThat(generatedPositions).containsExactlyInAnyOrderElementsOf(expectedPositions)
+    }
+
+
+
 }
 
 
