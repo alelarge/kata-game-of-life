@@ -43,12 +43,15 @@ enum class CellState {
 }
 
 class Cell(private var state: CellState) {
+    private val neighbors = mutableListOf<Cell>()
+
 
     fun isAlive(): Boolean {
         return state == CellState.ALIVE
     }
 
     fun addNeighbor(neighbor: Cell) {
+        neighbors.add(neighbor)
     }
 
 
