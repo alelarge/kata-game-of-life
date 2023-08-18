@@ -102,8 +102,7 @@ class CellTest {
         val deadNeighbor = Cell(CellState.DEAD)
         neighbors.forEach { aliveCell.addNeighbor(it) }
         aliveCell.addNeighbor(deadNeighbor)
-        aliveCell.evolve()
-
+        aliveCell.evolve(neighbors)
         assertThat(aliveCell.isAlive()).isTrue
     }
 }

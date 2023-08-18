@@ -43,9 +43,14 @@ enum class CellState {
 }
 
 class Cell(private var state: CellState) {
+
     fun isAlive(): Boolean {
         return state == CellState.ALIVE
     }
+
+    fun addNeighbor(neighbor: Cell) {
+    }
+
 
     fun evolve(neighbours: List<Cell>) {
         val numNeighboursAlive = neighbours.count { it.isAlive() }
