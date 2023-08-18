@@ -94,6 +94,15 @@ class CellTest {
         )
         assertThat(expectedNeighbours.toSet()).isEqualTo(expectedNeighbours)
         }
+
+    @Test
+    fun `cell with 3 live neighbors survives to the next generation`() {
+        val aliveCell = Cell(CellState.ALIVE)
+        val neighbors = List(3) { Cell(CellState.ALIVE) }
+        neighbors.add(Cell(CellState.DEAD))
+        aliveCell.evolve(neighbors)
+        assertThat(aliveCell.isAlive()).isTrue
+        }
     }
 
 
