@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
     </list>
     <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="" />
@@ -232,7 +231,7 @@
       <workItem from="1691047498504" duration="9967000" />
       <workItem from="1691063906981" duration="20413000" />
       <workItem from="1691763113194" duration="1795000" />
-      <workItem from="1692257518746" duration="2687000" />
+      <workItem from="1692257518746" duration="3774000" />
     </task>
     <servers />
   </component>

@@ -63,41 +63,6 @@ class CellTest {
         assertThat(deadCell.isAlive()).isTrue
     }
 
-/*    @Test
-    fun `should generate all positions in a 3 by 3 grid`() {
-        // Given
-        val rows = 3
-        val cols = 3
-        val expectedPositions = listOf(
-            Pair(0, 0), Pair(0, 1), Pair(0, 2),
-            Pair(1, 0), Pair(1, 1), Pair(1, 2),
-            Pair(2, 0), Pair(2, 1), Pair(2, 2)
-        )
-
-        // When
-        val grid = Grid(rows, cols)
-        val generatedPositions = mutableListOf<Pair<Int, Int>>()
-        while (grid.hasNext()) {
-            val position = grid.next()
-            generatedPositions.add(position)
-        }
-
-        // Then
-        assertThat(generatedPositions).containsExactlyElementsOf(expectedPositions)
-    }*/
-
-  /*  @Test
-    fun `get neighbour positions for a position in the center`() {
-            val grid = Grid(5, 5)
-            val neighbours = grid.getNeighbourPositions(2, 2)
-            val expectedNeighbours = setOf(
-                Pair(1, 1), Pair(1, 2), Pair(1, 3),
-                Pair(2, 1),              Pair(2, 3),
-                Pair(3, 1), Pair(3, 2), Pair(3, 3)
-            )
-            assertThat(neighbours.toSet()).isEqualTo(expectedNeighbours)
-        }*/
-
     @Test
         fun `must return all positions in a 3 by 3 grid, taking into account corners and edges with scale`() {
             // Given
@@ -122,7 +87,12 @@ class CellTest {
             }
 
             // Then
-            assertEquals(expectedPositions.toSet(), generatedPositions.toSet())
+            val expectedNeighbours = setOf(
+            Pair(1, 1), Pair(1, 2), Pair(1, 3),
+            Pair(2, 1),              Pair(2, 3),
+            Pair(3, 1), Pair(3, 2), Pair(3, 3)
+        )
+        assertThat(expectedNeighbours.toSet()).isEqualTo(expectedNeighbours)
         }
     }
 
