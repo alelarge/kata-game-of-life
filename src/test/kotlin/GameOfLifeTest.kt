@@ -83,7 +83,7 @@ class CellTest {
         for (x in 0 until rows) {
             for (y in 0 until cols) {
                     val cell = grid.getCell(x,y)
-                    assertThat(cell.getState).isEqualTo(deadState[x][y].getState())
+                    assertThat(cell.getState()).isEqualTo(deadState[x][y].getState())
             }
         }
     }

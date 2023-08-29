@@ -3,7 +3,11 @@ class Grid(private val rows: Int, private val cols: Int, gameState: List<List<Ce
 
     private var currentPosition = Position(0, 0)
 
-    val state = gameState
+    private val state = gameState
+
+    fun getCell(row: Int, col: Int): Cell {
+        return state[row][col]
+    }
 
     fun hasNext(): Boolean {
         return currentPosition.x < rows && currentPosition.y < cols
@@ -43,9 +47,14 @@ enum class CellState {
     ALIVE, DEAD
 }
 
-class Cell(private var state: CellState) {
+class Cell(private var cellState: CellState) {
     private val neighbors = mutableListOf<Cell>()
 
+    private var state = cellState
+
+    fun getState(): CellState {
+        return state
+    }
 
     fun isAlive(): Boolean {
         return state == CellState.ALIVE
