@@ -1,7 +1,9 @@
-class Grid(private val rows: Int, private val cols: Int) {
+class Grid(private val rows: Int, private val cols: Int, gameState: List<List<Cell>>) {
     data class Position(var x: Int, var y: Int)
 
     private var currentPosition = Position(0, 0)
+
+    val state = gameState
 
     fun hasNext(): Boolean {
         return currentPosition.x < rows && currentPosition.y < cols
@@ -33,7 +35,6 @@ class Grid(private val rows: Int, private val cols: Int) {
                 }
             }
         }
-
         return neighbourPositions
     }
 }

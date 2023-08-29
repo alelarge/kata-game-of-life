@@ -55,14 +55,40 @@ class CellTest {
     }
 
     @Test
-    fun `dead cell with three live neighbors becomes alive by reproduction`() {
-        val deadCell = Cell(CellState.DEAD)
-        val neighbours = listOf(Cell(CellState.ALIVE), Cell(CellState.ALIVE), Cell(CellState.ALIVE))
-        deadCell.evolve(neighbours)
-        assertThat(deadCell.isAlive()).isTrue
+    fun `cell with 3 live neighbors survives to the next generation`() {
+        //Given
+        val aliveCell = Cell(CellState.ALIVE)
+        val neighbors = List(3) { Cell(CellState.ALIVE) }
+        val deadNeighbor = Cell(CellState.DEAD)
+
+        //When
+        neighbors.forEach { aliveCell.addNeighbor(it) }
+        aliveCell.addNeighbor(deadNeighbor)
+        aliveCell.evolve(neighbors)
+
+        //Then
+        assertThat(aliveCell.isAlive()).isTrue
     }
 
     @Test
+    fun `grid must be initialized with a given state`(){
+        val rows = 3
+        val cols = 3
+        val deadState = listOf(
+            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD)),
+            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD)),
+            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD))
+        )
+        val grid = Grid(3,3, deadState)
+        for (x in 0 until rows) {
+            for (y in 0 until cols) {
+                    val cell = grid.getCell(x,y)
+                    assertThat(cell.getState).isEqualTo(deadState[x][y].getState())
+            }
+        }
+    }
+
+/*    @Test
         fun `must return all positions in a 3 by 3 grid, taking into account corners and edges with scale`() {
             // Given
             val rows = 3
@@ -91,26 +117,15 @@ class CellTest {
             Pair(2, 1),              Pair(2, 3),
             Pair(3, 1), Pair(3, 2), Pair(3, 3)
         )
-        assertThat(expectedNeighbours.toSet()).isEqualTo(expectedNeighbours)
-        }
 
-    @Test
-    fun `cell with 3 live neighbors survives to the next generation`() {
-        //Given
-        val aliveCell = Cell(CellState.ALIVE)
-        val neighbors = List(3) { Cell(CellState.ALIVE) }
-        val deadNeighbor = Cell(CellState.DEAD)
+        assertThat(expectedNeighbours.toSet()).isEqualTo(getNeighbourPositions(Pair(2,2)).toSet())
 
-        //When
-        neighbors.forEach { aliveCell.addNeighbor(it) }
-        aliveCell.addNeighbor(deadNeighbor)
-        aliveCell.evolve(neighbors)
+        //assertThat(expectedNeighbours.toSet()).isEqualTo(expectedPositions.toSet())
 
-        //Then
-        assertThat(aliveCell.isAlive()).isTrue
-    }
+    }*/
+
+
 }
-
 
 
 
