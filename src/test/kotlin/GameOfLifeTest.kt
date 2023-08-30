@@ -88,43 +88,26 @@ class CellTest {
         }
     }
 
-/*    @Test
-        fun `must return all positions in a 3 by 3 grid, taking into account corners and edges with scale`() {
-            // Given
-            val rows = 3
-            val cols = 3
-            val scale = 1
-            val expectedPositions = mutableListOf<Grid.Position>()
+    @Test
+    fun `must return all positions of the neighbours of the cell`() {
+        // Given
+        val deadState = listOf(
+            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD)),
+            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD)),
+            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD))
+        )
+        val grid = Grid(3,3, deadState)
+        val cellNeighbourPositions = grid.getNeighbourPositions(Position(1, 1),1)
 
-            for (x in 0 until rows) {
-                for (y in 0 until cols) {
-                    val position = Grid.Position(x, y)
-                    expectedPositions.addAll(Grid(rows, cols).getNeighbourPositions(position, scale))
-                }
-            }
-
-            // When
-            val grid = Grid(rows, cols)
-            val generatedPositions = mutableListOf<Grid.Position>()
-            while (grid.hasNext()) {
-                val position = grid.next()
-                generatedPositions.add(position)
-            }
-
-            // Then
-            val expectedNeighbours = setOf(
-            Pair(1, 1), Pair(1, 2), Pair(1, 3),
-            Pair(2, 1),              Pair(2, 3),
-            Pair(3, 1), Pair(3, 2), Pair(3, 3)
+        // Then
+        val expectedNeighbours = setOf(
+            Position(0, 0), Position(0, 1), Position(0, 2),
+            Position(1, 0),                       Position(1, 2),
+            Position(2, 0), Position(2, 1), Position(2, 2)
         )
 
-        assertThat(expectedNeighbours.toSet()).isEqualTo(getNeighbourPositions(Pair(2,2)).toSet())
-
-        //assertThat(expectedNeighbours.toSet()).isEqualTo(expectedPositions.toSet())
-
-    }*/
-
-
+        assertThat(expectedNeighbours.toSet()).isEqualTo(cellNeighbourPositions.toSet())
+    }
 }
 
 

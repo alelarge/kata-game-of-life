@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0c7217ac-2641-4d16-9508-0a9e19e0f54d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GameOfLife.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GameOfLifeTest.kt" afterDir="false" />
     </list>
     <list id="cf0547d2-5e0a-4610-b2c4-5cce1e07c8e3" name="Changes by dim" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +84,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CellTest">
+  <component name="RunManager" selected="Gradle.CellTest.must return all positions of the neighbours of the cell">
     <configuration name="CellTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -120,29 +122,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;CellTest.cell dies when it has less than 2 live neighbors&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CellTest.cell with 3 live neighbors survives to the next generation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;CellTest.cell with 3 live neighbors survives to the next generation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -198,13 +177,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CellTest.must return all positions of the neighbours of the cell" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;CellTest.must return all positions of the neighbours of the cell&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CellTest.must return all positions of the neighbours of the cell" />
+        <item itemvalue="Gradle.CellTest.cell dies when it has less than 2 live neighbors" />
         <item itemvalue="Gradle.CellTest" />
         <item itemvalue="Gradle.CellTest.grid must be initialized with a given state" />
         <item itemvalue="Gradle.CellTest.must return all positions in a 3 by 3 grid, taking into account corners and edges with scale" />
-        <item itemvalue="Gradle.CellTest.cell with 3 live neighbors survives to the next generation" />
-        <item itemvalue="Gradle.CellTest.cell dies when it has less than 2 live neighbors" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +233,8 @@
       <workItem from="1691063906981" duration="20413000" />
       <workItem from="1691763113194" duration="1795000" />
       <workItem from="1692257518746" duration="16661000" />
-      <workItem from="1693303174663" duration="1517000" />
+      <workItem from="1693303174663" duration="2940000" />
+      <workItem from="1693383206511" duration="6309000" />
     </task>
     <servers />
   </component>

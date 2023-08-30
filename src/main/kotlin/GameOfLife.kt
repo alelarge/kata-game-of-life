@@ -1,6 +1,5 @@
+data class Position(var x: Int, var y: Int)
 class Grid(private val rows: Int, private val cols: Int, gameState: List<List<Cell>>) {
-    data class Position(var x: Int, var y: Int)
-
     private var currentPosition = Position(0, 0)
 
     private val state = gameState
