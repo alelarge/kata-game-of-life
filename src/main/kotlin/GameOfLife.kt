@@ -1,3 +1,27 @@
+class Game{
+    constructor(
+        grid: Grid,
+        aliveCell : List<Cell>
+    ){
+        this.grid = grid
+        this.aliveCell = aliveCell
+    }
+
+    val grid : Grid
+    val aliveCell :List<Cell>
+
+    //attribut global
+    fun isOver() : Boolean {
+        if (aliveCell.isEmpty()) {
+            return true
+        } else {
+            return false
+        }
+    }
+    fun play(){
+    }
+}
+
 data class Position(var x: Int, var y: Int)
 class Grid(private val rows: Int, private val cols: Int) {
     private var currentPosition = Position(0, 0)

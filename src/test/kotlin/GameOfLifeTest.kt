@@ -73,16 +73,43 @@ class CellTest {
     @Test
     fun `must return all positions of the neighbours of the cell`() {
         // Given
-        val grid = Grid(3,3)
-        val cellNeighbourPositions = grid.getNeighbourPositions(Position(1, 1),1)
+        val grid = Grid(3, 3)
+        val cellNeighbourPositions = grid.getNeighbourPositions(Position(1, 1), 1)
 
         // Then
         val expectedNeighbours = setOf(
             Position(0, 0), Position(0, 1), Position(0, 2),
-            Position(1, 0),                       Position(1, 2),
+            Position(1, 0), Position(1, 2),
             Position(2, 0), Position(2, 1), Position(2, 2)
         )
         assertThat(expectedNeighbours.toSet()).isEqualTo(cellNeighbourPositions.toSet())
+    }
+
+    @Test
+    fun `au début du jeu game of life, si je n'ai aucune cellules vivantes alors le jeu est terminé`() {
+        val grid = Grid(3, 3)
+        val game = Game(grid, emptyList<Cell>())
+        assertThat(game.isOver()).isTrue
+
+    }
+
+    @Test
+    fun `au début du jeu game of life, si on a des cellules vivantes, le jeu continue`(){
+        val grid = Grid (3,3)
+        val game = Game(grid, listOf(Cell(CellState.ALIVE)))
+        assertThat(game.isOver()).isFalse
+}
+    @Test
+    fun `au départ du jeu game of life, si j'ai une cellule vivante, alors au tour suivant, le jeu est fini`(){
+        //Given
+        val grid= Grid(3,3)
+
+        val game = Game(grid, listOf(Cell(CellState.ALIVE)))
+        // When
+        game.play()
+
+        //Then
+        assertThat(game.isOver()).isTrue
     }
 }
 
