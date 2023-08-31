@@ -1,12 +1,6 @@
 data class Position(var x: Int, var y: Int)
-class Grid(private val rows: Int, private val cols: Int, gameState: List<List<Cell>>) {
+class Grid(private val rows: Int, private val cols: Int) {
     private var currentPosition = Position(0, 0)
-
-    private val state = gameState
-
-    fun getCell(row: Int, col: Int): Cell {
-        return state[row][col]
-    }
 
     fun hasNext(): Boolean {
         return currentPosition.x < rows && currentPosition.y < cols
@@ -23,7 +17,6 @@ class Grid(private val rows: Int, private val cols: Int, gameState: List<List<Ce
 
         return position
     }
-
 
     fun getNeighbourPositions(position: Position, scale: Int): Set<Position> {
         val neighbourPositions = mutableSetOf<Position>()

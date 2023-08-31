@@ -71,32 +71,9 @@ class CellTest {
     }
 
     @Test
-    fun `grid must be initialized with a given state`(){
-        val rows = 3
-        val cols = 3
-        val deadState = listOf(
-            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD)),
-            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD)),
-            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD))
-        )
-        val grid = Grid(3,3, deadState)
-        for (x in 0 until rows) {
-            for (y in 0 until cols) {
-                    val cell = grid.getCell(x,y)
-                    assertThat(cell.getState()).isEqualTo(deadState[x][y].getState())
-            }
-        }
-    }
-
-    @Test
     fun `must return all positions of the neighbours of the cell`() {
         // Given
-        val deadState = listOf(
-            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD)),
-            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD)),
-            listOf(Cell(CellState.DEAD), Cell(CellState.DEAD),Cell(CellState.DEAD))
-        )
-        val grid = Grid(3,3, deadState)
+        val grid = Grid(3,3)
         val cellNeighbourPositions = grid.getNeighbourPositions(Position(1, 1),1)
 
         // Then
@@ -105,7 +82,6 @@ class CellTest {
             Position(1, 0),                       Position(1, 2),
             Position(2, 0), Position(2, 1), Position(2, 2)
         )
-
         assertThat(expectedNeighbours.toSet()).isEqualTo(cellNeighbourPositions.toSet())
     }
 }
