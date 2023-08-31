@@ -1,14 +1,14 @@
 class Game{
     constructor(
         grid: Grid,
-        aliveCell : List<Cell>
+        aliveCell : List<Position>
     ){
         this.grid = grid
         this.aliveCell = aliveCell
     }
 
-    val grid : Grid
-    val aliveCell :List<Cell>
+    private val grid : Grid
+    private var aliveCell : List<Position>
 
     //attribut global
     fun isOver() : Boolean {
@@ -19,86 +19,24 @@ class Game{
         }
     }
     fun play(){
-    }
-}
-
-data class Position(var x: Int, var y: Int)
-class Grid(private val rows: Int, private val cols: Int) {
-    private var currentPosition = Position(0, 0)
-
-    fun hasNext(): Boolean {
-        return currentPosition.x < rows && currentPosition.y < cols
-    }
-
-    fun next(): Position {
-        val position = currentPosition.copy()
-
-        currentPosition.y++
-        if (currentPosition.y == cols) {
-            currentPosition.y = 0
-            currentPosition.x++
-        }
-
-        return position
-    }
-
-    fun getNeighbourPositions(position: Position, scale: Int): Set<Position> {
-        val neighbourPositions = mutableSetOf<Position>()
-
-        for (i in -1 * scale..scale) {
-            for (j in -1 * scale..scale) {
-                if (i == 0 && j == 0) continue
-                val newX = position.x + i
-                val newY = position.y + j
-                if (newX in 0 until rows && newY in 0 until cols) {
-                    neighbourPositions.add(Position(newX, newY))
-                }
+        val aliveCellPositionForCurrentTurn : MutableList<Position> = mutableListOf()
+        while(grid.hasNext()){
+            val position = grid.next()
+            val neighbour = grid.getNeighbourPositions(position,1).map { p -> getCellAtPosition(p)}
+            val cell = getCellAtPosition(position)
+            cell.evolve(neighbour)
+            if(cell.isAlive()){
+                aliveCellPositionForCurrentTurn.add(position)
             }
         }
-        return neighbourPositions
+        aliveCell = aliveCellPositionForCurrentTurn
     }
-}
-
-enum class CellState {
-    ALIVE, DEAD
-}
-
-class Cell(private var cellState: CellState) {
-    private val neighbors = mutableListOf<Cell>()
-
-    private var state = cellState
-
-    fun getState(): CellState {
-        return state
-    }
-
-    fun isAlive(): Boolean {
-        return state == CellState.ALIVE
-    }
-
-    fun addNeighbor(neighbor: Cell) {
-        neighbors.add(neighbor)
-    }
-
-
-    fun evolve(neighbours: List<Cell>) {
-        val numNeighboursAlive = neighbours.count { it.isAlive() }
-
-        state = when (state) {
-            CellState.ALIVE -> {
-                if (numNeighboursAlive < 2 || numNeighboursAlive > 3) {
-                    CellState.DEAD
-                } else {
-                    CellState.ALIVE
-                }
-            }
-            CellState.DEAD -> {
-                if (numNeighboursAlive == 3) {
-                    CellState.ALIVE
-                } else {
-                    CellState.DEAD
-                }
-            }
+    private fun getCellAtPosition(position: Position): Cell{
+        if(aliveCell.contains(position)){
+            return Cell(CellState.ALIVE)
+        } else {
+            return Cell(CellState.DEAD)
         }
     }
 }
+

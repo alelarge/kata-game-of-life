@@ -88,23 +88,23 @@ class CellTest {
     @Test
     fun `au début du jeu game of life, si je n'ai aucune cellules vivantes alors le jeu est terminé`() {
         val grid = Grid(3, 3)
-        val game = Game(grid, emptyList<Cell>())
+        val game = Game(grid, emptyList<Position>())
         assertThat(game.isOver()).isTrue
-
     }
 
     @Test
-    fun `au début du jeu game of life, si on a des cellules vivantes, le jeu continue`(){
-        val grid = Grid (3,3)
-        val game = Game(grid, listOf(Cell(CellState.ALIVE)))
+    fun `au début du jeu game of life, si on a des cellules vivantes, le jeu continue`() {
+        val grid = Grid(3, 3)
+        val game = Game(grid, listOf(Position(0,0)))
         assertThat(game.isOver()).isFalse
-}
-    @Test
-    fun `au départ du jeu game of life, si j'ai une cellule vivante, alors au tour suivant, le jeu est fini`(){
-        //Given
-        val grid= Grid(3,3)
+    }
 
-        val game = Game(grid, listOf(Cell(CellState.ALIVE)))
+    @Test
+    fun `au départ du jeu game of life, si j'ai une cellule vivante, alors au tour suivant, le jeu est fini`() {
+        //Given
+        val grid = Grid(3, 3)
+
+        val game = Game(grid, listOf(Position(0,0)))
         // When
         game.play()
 
